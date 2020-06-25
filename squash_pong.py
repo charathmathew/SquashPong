@@ -8,10 +8,10 @@ import pygame
 
 pygame.init()
 
-WIDTH = 1500
-HEIGHT = 900
+WIDTH = 1200
+HEIGHT = 600
 BORDER = 20
-VELOCITY = 1
+VELOCITY = 10
 
 bgColor = pygame.Color("black")
 borderColor = pygame.Color("yellow")
@@ -19,6 +19,9 @@ paddleColor = pygame.Color("blue")
 ballColor = pygame.Color("red")
 
 gameOver = False
+
+clock = pygame.time.Clock()
+FPS = 60
 
 class Ball:
 
@@ -96,6 +99,8 @@ while not gameOver:
     if e.type == pygame.QUIT:
         break
     
+    clock.tick(FPS)
+
     pygame.display.flip()
 
     pongPaddle.updatePosition()
