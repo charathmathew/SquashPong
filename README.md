@@ -3,7 +3,7 @@
 
 Uses the pygame library: https://www.pygame.org/
 
-A single player pong game where the ball can bounce off three walls (top, left and bottom). You control pong paddle with your mouse.
+A single player pong game where the ball can bounce off three walls (top, left and bottom). You control the pong paddle with your mouse.
 
 Possible future improvements:
 1. Add a game over/play again screen
