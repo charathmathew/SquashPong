@@ -18,6 +18,7 @@ borderColor = pygame.Color("yellow")
 paddleColor = pygame.Color("blue")
 ballColor = pygame.Color("red")
 
+gameOver = False
 
 class Ball:
 
@@ -45,6 +46,9 @@ class Ball:
             self.vy = -self.vy
         elif nextXpos + self.RADIUS > WIDTH - (2 * pongPaddle.WIDTH) and abs(nextYpos-pongPaddle.y) < pongPaddle.HEIGHT:
             self.vx = -self.vx
+        elif nextXpos + self.RADIUS > WIDTH - BORDER:
+            global gameOver
+            gameOver = True
         else:
             self.show(bgColor)
             self.x = self.x + self.vx
@@ -87,7 +91,7 @@ pongBall.show(ballColor)
 pongPaddle.show(paddleColor)
 
 
-while True:
+while not gameOver:
     e = pygame.event.poll()
     if e.type == pygame.QUIT:
         break
@@ -97,4 +101,5 @@ while True:
     pongPaddle.updatePosition()
     pongBall.updatePosition()
 
+print("game over")
 pygame.quit()
