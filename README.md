@@ -5,6 +5,10 @@ Uses the pygame library: https://www.pygame.org/
 
 A single player pong game where the ball bounces off three walls (top, left and bottom). You control the pong paddle with your mouse. Try to keep the ball away from the red boundary on the right.
 
+
+![Pygame window screenshot](https://github.com/charathmathew/SquashPong/blob/master/Capture.PNG?raw=true 'Pygame window screenshot')
+
+
 Possible future improvements:
 1. Add a game over/play again screen
 1. Add a second paddle for multiplayer
